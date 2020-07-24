@@ -14,8 +14,52 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Camera Component</ion-card-subtitle>
+      <ion-card-title>Camera</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <app-camera icon="camera" [type]="camera"></app-camera>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Upload Component</ion-card-subtitle>
+      <ion-card-title>Upload</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <app-image-upload icon="cloud-upload-outline" (output)=showImage($event)></app-image-upload>
+      <img [src]="image" *ngIf="image">
+
+    </ion-card-content>
+
+    
+
+    
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Take Photo & Share</ion-card-subtitle>
+      <ion-card-title>Share</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+
+      <app-share icon="share-outline"></app-share>
+
+    </ion-card-content>
+
+    
+
+    
+
+  </ion-card>
+
+
 </ion-content>

@@ -8,6 +8,10 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 
+import { CameraComponent } from '../components/camera/camera.component';
+import { ImageUploadComponent } from '../components/image-upload/image-upload.component';
+import { ShareComponent } from '../components/share/share.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +19,7 @@ import { FolderPage } from './folder.page';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage, CameraComponent, ImageUploadComponent, ShareComponent],
+  exports: [CameraComponent, ImageUploadComponent, ShareComponent]
 })
 export class FolderPageModule {}
